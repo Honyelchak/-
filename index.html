@@ -1,164 +1,163 @@
 <html>
 
 <head>
-  <title>聚合搜索&nbsp;&nbsp;|&nbsp;&nbsp;Designed By JonnyYue</title>
-  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-  <meta name="author" content="JonnyYue" />
-  <meta name="description" content="聚合导航|IT极客专用" />
-  <meta name="keywords" content="Nav,导航,IT专用" />
-  <style>
-    //下面即为样式，若需修改，修改副本
-    * {
-      padding: 0;
-      margin: 0;
-    }
+	<meta http-equiv="Content-Type" Content="text/html;charset=utf-8" />
+	<meta name="author" Content="Jokin3" />
+	<meta name="keywords" Content="后台" />
+	<link rel="stylesheet" type="text/css" href="index.css" />
+	<title>聚合搜索</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
 
-    body {
-      background-color: #E5474B
-    }
+		body {
+			background: url("bg2.jpeg") repeat 100% 100%;
+		}
 
+		.SearchBar {
+			/*margin:calc(50% - 50px) calc(50% - 304px);*/
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: calc(23% - 50px) 0px 0px;
+			flex-wrap: wrap;
+		}
 
-    .SearchBar {
-      /*margin:calc(50% - 50px) calc(50% - 304px);*/
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: calc(23% - 50px) 0px 0px;
-      flex-wrap: wrap;
-    }
+		.input-bar {
+			width: 602px;
+			height: 44px;
+			text-indent: 6px;
+			font-size: 20px;
+			border: rgba(255, 255, 255, 0.8) 3px solid;
+			background: none;
+			color: #fff;
+			margin-bottom: 8px;
+			color: #fff;
 
-    .input-bar {
-      width: 602px;
-      height: 44px;
-      text-indent: 6px;
-      font-size: 20px;
-      border: rgba(255, 255, 255, 0.8) 3px solid;
-      background: none;
-      color: #fff;
-      margin-bottom: 8px;
-      color: #fff;
+		}
 
-    }
+		input::-webkit-input-placeholder {
+			color: #fff;
+		}
 
-    input::-webkit-input-placeholder {
-      color: #fff;
-    }
+		input::-moz-placeholder {
+			color: #fff;
+		}
 
-    input::-moz-placeholder {
-      color: #fff;
-    }
+		.input-bar:focus {
+			border: 3px solid #fff;
+			outline: none;
+			background: none;
+		}
 
-    .input-bar:focus {
-      border: 3px solid #fff;
-      outline: none;
-      background: none;
-    }
+		.Sbutton {
+			width: 80px;
+			height: 46px;
+			color: #fff;
+			background: none;
+			border: 3px solid #fff;
+			font-size: 16px;
+			letter-spacing: 4px;
+			font-weight: 800;
+			cursor: pointer;
+			outline: none;
+			background-color: rgba(255, 255, 255, .3);
 
-    .Sbutton {
-      width: 80px;
-      height: 46px;
-      color: #fff;
-      background: none;
-      border: 3px solid #fff;
-      font-size: 16px;
-      letter-spacing: 4px;
-      font-weight: 800;
-      cursor: pointer;
-      outline: none;
-      background-color:rgba(255,255,255,.3);
+		}
 
-    }
-    .Sbutton:hover{
-      background: none;
-      transition: background-color .7s;
-    }
-    .Sbutton :focus {
-      outline: none;
-    }
-    .button {
-      width: 602px;
-      display: flex;
-      justify-content: space-between;
-    }
-  </style>
+		.Sbutton:hover {
+			background: none;
+			transition: background-color .7s;
+		}
+
+		.Sbutton :focus {
+			outline: none;
+		}
+
+		.button {
+			width: 602px;
+			display: flex;
+			justify-content: space-between;
+		}
+	</style>
 </head>
 
 <body>
-  <div class="SearchBar">
-    <form action="http://www.baidu.com/s" class="Sform" target="_blank" id="Sform" method="get">
-      <input type="text" hidden />
-      <input type="text" class="input-bar" onkeydown="enter(event)" autofocus="autofocus" name="word" id="input-bar" />
-      <br />
-      <div class="button">
-        <input type="button" id="baidu" class="Sbutton" value="百度" />
-        <input type="button" id="google" class="Sbutton" value="谷歌" />
-        <input type="button" id="zhihu" class="Sbutton" value="知乎" />
-        <input type="button" id="weixin" class="Sbutton" value="微信" />
-        <input type="button" id="weibo" class="Sbutton" value="微博" />
-        <input type="button" id="ditu" class="Sbutton" value="地图" />
-        <input type="button" id="taobao" class="Sbutton" value="淘宝" />
-      </div>
+	<div class="SearchBar">
+		<form action="http://www.baidu.com/s" class="Sform" target="_blank" id="Sform" method="get">
+			<input type="text" hidden />
+			<input type="text" class="input-bar" onkeydown="enter(event)" autofocus="autofocus" name="word" id="input-bar" />
+			<br />
+			<div class="button">
+				<input type="button" id="baidu" class="Sbutton" value="百度" />
+				<input type="button" id="youdao" class="Sbutton" value="翻译" />
+				<input type="button" id="zhihu" class="Sbutton" value="知乎" />
+				<input type="button" id="weixin" class="Sbutton" value="微信" />
+				<input type="button" id="weibo" class="Sbutton" value="微博" />
+				<input type="button" id="ditu" class="Sbutton" value="地图" />
+				<input type="button" id="taobao" class="Sbutton" value="淘宝" />
+			</div>
 
-    </form>
+		</form>
+	</div>
+	<script type="text/javascript">
+		var Sform = document.getElementById("Sform");
+		var inputBar = document.getElementById("input-bar");
+		var baidu = document.getElementById("baidu");
+		var youdao = document.getElementById("youdao");
+		var zhihu = document.getElementById("zhihu");
+		var weixin = document.getElementById("weixin");
+		var weibo = document.getElementById("weibo");
+		var taobao = document.getElementById("taobao");
+		var ditu = document.getElementById("ditu");
 
-  </div>
-  <script type="text/javascript">
-    var Sform = document.getElementById("Sform");
-    var inputBar = document.getElementById("input-bar");
-    var baidu = document.getElementById("baidu");
-    var google = document.getElementById("google");
-    var zhihu = document.getElementById("zhihu");
-    var weixin = document.getElementById("weixin");
-    var weibo = document.getElementById("weibo");
-    var taobao = document.getElementById("taobao");
-    var ditu = document.getElementById("ditu");
+		function enter(event) {
+			var key = event.keyCode;
+			if (key == 13) {
+				clear();
+			}
+		}
 
-    function enter(event) {
-      var key = event.keyCode;
-      if (key == 13) {
-        clear();
-      }
-    }
-
-    function clear() {
-      Sform.submit();
-      inputBar.value = null;
-    }
-    baidu.onclick = function() {
-      Sform.action = "http://www.baidu.com/s";
-      inputBar.name = "wd";
-      clear();
-    }
-    google.onclick = function() {
-      Sform.action = "http://www.google.com/search";
-      inputBar.name = "q";
-      clear();
-    }
-    zhihu.onclick = function() {
-      Sform.action = "http://www.zhihu.com/search";
-      inputBar.name = "q";
-      clear();
-    }
-    weixin.onclick = function() {
-      window.open("http://weixin.sogou.com/weixin?type=2&query=" + inputBar.value + "&ie=utf8");
-      clear();
-    }
-    weibo.onclick = function() {
-      Sform.action = "http://s.weibo.com/weibo/" + inputBar.value;
-      inputBar.name = "q";
-      inputBar.type = "question";
-      clear();
-    }
-    ditu.onclick = function() {
-      window.open("http://ditu.amap.com/search?query=" + inputBar.value + " ");
-      clear();
-    }
-    taobao.onclick = function() {
-      Sform.action = "https://s.taobao.com/search?";
-      inputBar.name = "q";
-      clear();
-    }
-  </script>
+		function clear() {
+			Sform.submit();
+			inputBar.value = null;
+		}
+		baidu.onclick = function() {
+			Sform.action = "http://www.baidu.com/s";
+			inputBar.name = "wd";
+			clear();
+		}
+		youdao.onclick = function() {
+			Sform.action = "http://www.youdao.com/w/eng/"+inputBar.value;
+			clear();
+		}
+		zhihu.onclick = function() {
+			Sform.action = "http://www.zhihu.com/search";
+			inputBar.name = "q";
+			clear();
+		}
+		weixin.onclick = function() {
+			window.open("http://weixin.sogou.com/weixin?type=2&query=" + inputBar.value + "&ie=utf8");
+			clear();
+		}
+		weibo.onclick = function() {
+			Sform.action = "http://s.weibo.com/weibo/" + inputBar.value;
+			inputBar.name = "q";
+			inputBar.type = "question";
+			clear();
+		}
+		ditu.onclick = function() {
+			window.open("http://ditu.amap.com/search?query=" + inputBar.value + " ");
+			clear();
+		}
+		taobao.onclick = function() {
+			Sform.action = "https://s.taobao.com/search?";
+			inputBar.name = "q";
+			clear();
+		}
+	</script>
 </body>
 
 </html>
